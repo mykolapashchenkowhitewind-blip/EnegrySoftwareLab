@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Energy Management Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div>
+      <p class="eyebrow">TR-51mp</p>
+      <h1>University EMS</h1>
+      <p class="subtle">Pashchenko Mykola</p>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#consumption">Consumption</a>
+      <a href="#forecast">Forecast</a>
+      <a href="#ems">EMS</a>
+      <a href="#reports">Reports</a>
+    </nav>
+    <a class="docs-link" href="/docs">API Docs</a>
+  </aside>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Lab 4</p>
+          <h2>Monitoring And Control</h2>
+        </div>
+        <button id="refresh">Refresh</button>
+      </div>
+      <div id="kpiGrid" class="kpi-grid"></div>
+    </section>
+
+    <section id="consumption" class="section">
+      <div class="section-title">
+        <h2>Consumption</h2>
+        <select id="periodSelect">
+          <option value="day">Daily</option>
+          <option value="month">Monthly</option>
+          <option value="hour">Hourly</option>
+        </select>
+      </div>
+      <div class="chart-grid">
+        <article class="panel span-2">
+          <h3>Consumption Time Series</h3>
+          <canvas id="consumptionChart" height="110"></canvas>
+        </article>
+        <article class="panel">
+          <h3>Baseline Comparison</h3>
+          <canvas id="baselineChart" height="180"></canvas>
+        </article>
+        <article class="panel">
+          <h3>Hour x Weekday Heatmap</h3>
+          <div id="heatmap" class="heatmap"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="forecast" class="section">
+      <div class="section-title">
+        <h2>Forecast</h2>
+      </div>
+      <div class="chart-grid">
+        <article class="panel span-2">
+          <h3>Next-Month Forecast</h3>
+          <canvas id="forecastChart" height="115"></canvas>
+        </article>
+        <article class="panel span-2">
+          <h3>Model Comparison</h3>
+          <table id="modelTable"></table>
+        </article>
+      </div>
+    </section>
+
+    <section id="ems" class="section">
+      <div class="section-title">
+        <h2>EMS Control Panel</h2>
+      </div>
+      <div class="chart-grid">
+        <article class="panel">
+          <h3>Current Status</h3>
+          <div id="emsStatus" class="status-grid"></div>
+        </article>
+        <article class="panel">
+          <h3>Energy Flow</h3>
+          <div id="flowChart" class="flow-chart"></div>
+        </article>
+        <article class="panel span-2">
+          <h3>Energy Balance</h3>
+          <canvas id="emsChart" height="110"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section id="reports" class="section">
+      <div class="section-title">
+        <h2>Reports</h2>
+        <button id="exportReport">Export CSV</button>
+      </div>
+      <article class="panel">
+        <h3>Summary Preview</h3>
+        <pre id="reportPreview"></pre>
+      </article>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

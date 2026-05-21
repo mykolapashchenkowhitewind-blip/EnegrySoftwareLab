@@ -248,3 +248,45 @@ The workflow creates:
 - consumption sources,
 - savings by tariff zone,
 - baseline cost versus EMS cost.
+
+---
+
+# Лабораторна робота №4
+
+**Тема:** Веб-інтерфейс для моніторингу та управління  
+**Дисципліна:** Програмне забезпечення енергетичного менеджменту  
+**Студент:** Pashchenko Mykola  
+**Група:** TR-51mp  
+**Варіант:** 8, University
+
+## Мета роботи
+
+Створити веб-застосунок, який об'єднує результати Lab 1, Lab 2 і Lab 3: історію споживання, агреговану аналітику, baseline, прогноз, EMS-моніторинг та формування звітів.
+
+## Як запустити Lab 4
+
+```powershell
+python .\app\main.py
+```
+
+Open in browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+API docs:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Результати Lab 4
+
+- Backend API: `app/main.py`, `app/services/`
+- Frontend app: `app/static/`
+- API reference: `docs/lab4_api.md`
+- Lab report: `docs/lab4_report.md`
+- JSON report: `data/lab4/summary_report.json`
+- CSV export: `data/lab4/exported_report.csv`
+- Screenshots folder: `reports/lab4_screenshots/`

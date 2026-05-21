@@ -1,0 +1,8 @@
+metric,value
+latest,"{'measured_at': '2025-12-31 23:00:00', 'consumption_kwh': 74.734}"
+year_consumption_kwh,652594.59
+forecast_next_month_kwh,58435.49
+weekly_savings_uah,26882.85
+pv_generation_week_kwh,4280.08
+avg_battery_soc_percent,40.27
+co2_estimate_kg,261037.83

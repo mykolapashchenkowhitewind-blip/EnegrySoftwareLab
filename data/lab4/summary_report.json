@@ -1,0 +1,220 @@
+{
+  "object": {
+    "student": "Pashchenko Mykola",
+    "group": "TR-51mp",
+    "discipline": "Програмне забезпечення енергетичного менеджменту",
+    "variant": 8,
+    "object": "University",
+    "area_m2": 5200,
+    "installed_power_kw": 350,
+    "meters": 14,
+    "operating_mode": "24/7",
+    "solar_capacity_kw": 140,
+    "battery_capacity_kwh": 110,
+    "tariff": "3-zone"
+  },
+  "dashboard": {
+    "latest": {
+      "measured_at": "2025-12-31 23:00:00",
+      "consumption_kwh": 74.734
+    },
+    "year_consumption_kwh": 652594.59,
+    "forecast_next_month_kwh": 58435.49,
+    "weekly_savings_uah": 26882.85,
+    "pv_generation_week_kwh": 4280.08,
+    "avg_battery_soc_percent": 40.27,
+    "co2_estimate_kg": 261037.83
+  },
+  "baseline": [
+    {
+      "month": 1,
+      "baseline_kwh": 57200.74,
+      "actual_kwh": 58969.83
+    },
+    {
+      "month": 2,
+      "baseline_kwh": 50747.91,
+      "actual_kwh": 52317.44
+    },
+    {
+      "month": 3,
+      "baseline_kwh": 54305.38,
+      "actual_kwh": 55984.93
+    },
+    {
+      "month": 4,
+      "baseline_kwh": 52053.29,
+      "actual_kwh": 53663.19
+    },
+    {
+      "month": 5,
+      "baseline_kwh": 52155.32,
+      "actual_kwh": 53768.37
+    },
+    {
+      "month": 6,
+      "baseline_kwh": 49367.69,
+      "actual_kwh": 50894.53
+    },
+    {
+      "month": 7,
+      "baseline_kwh": 51215.09,
+      "actual_kwh": 52799.06
+    },
+    {
+      "month": 8,
+      "baseline_kwh": 50781.01,
+      "actual_kwh": 52351.56
+    },
+    {
+      "month": 9,
+      "baseline_kwh": 51046.02,
+      "actual_kwh": 52624.76
+    },
+    {
+      "month": 10,
+      "baseline_kwh": 54397.49,
+      "actual_kwh": 56079.89
+    },
+    {
+      "month": 11,
+      "baseline_kwh": 52753.45,
+      "actual_kwh": 54385.0
+    },
+    {
+      "month": 12,
+      "baseline_kwh": 56993.36,
+      "actual_kwh": 58756.04
+    }
+  ],
+  "models": [
+    {
+      "model": "Random_Forest",
+      "r2": "0.9690632645573581",
+      "rmse": "3.8680459357736114",
+      "mae": "3.137527299668029",
+      "mape": "4.0278207339721"
+    },
+    {
+      "model": "Gradient_Boosting",
+      "r2": "0.9675411757299786",
+      "rmse": "3.962057496300425",
+      "mae": "3.2005369070579577",
+      "mape": "4.108494555876647"
+    },
+    {
+      "model": "Polynomial_Regression",
+      "r2": "0.9638505504710363",
+      "rmse": "4.1812412422990395",
+      "mae": "3.4400728289087916",
+      "mape": "4.510549205277511"
+    },
+    {
+      "model": "Multiple_Linear_Regression",
+      "r2": "0.9507275116422675",
+      "rmse": "4.881537490330816",
+      "mae": "3.8630870591780653",
+      "mape": "5.021669093440222"
+    },
+    {
+      "model": "Persistence_24h",
+      "r2": "0.4351035060576961",
+      "rmse": "16.528704708800426",
+      "mae": "10.27706439790576",
+      "mape": "13.70348472336668"
+    },
+    {
+      "model": "Simple_Linear_Regression",
+      "r2": "0.0961874594527774",
+      "rmse": "20.9070887468884",
+      "mae": "16.69981445014693",
+      "mape": "21.00003883478815"
+    }
+  ],
+  "ems_metrics": {
+    "energy": [
+      {
+        "metric": "total_consumption_kwh",
+        "value": "12559.920900000001"
+      },
+      {
+        "metric": "total_pv_generation_kwh",
+        "value": "4280.082623071931"
+      },
+      {
+        "metric": "pv_coverage_percent",
+        "value": "34.07730555908143"
+      },
+      {
+        "metric": "pv_self_consumption_percent",
+        "value": "100.0"
+      },
+      {
+        "metric": "grid_import_kwh",
+        "value": "8327.620336302782"
+      },
+      {
+        "metric": "grid_export_kwh",
+        "value": "0.0"
+      },
+      {
+        "metric": "battery_charged_kwh",
+        "value": "519.0510255559441"
+      },
+      {
+        "metric": "battery_discharged_kwh",
+        "value": "471.2689661812322"
+      },
+      {
+        "metric": "approx_battery_cycles",
+        "value": "4.284263328920293"
+      },
+      {
+        "metric": "min_soc_percent",
+        "value": "20.0"
+      },
+      {
+        "metric": "max_soc_percent",
+        "value": "83.82"
+      },
+      {
+        "metric": "avg_soc_percent",
+        "value": "40.274459133091824"
+      }
+    ],
+    "economic": [
+      {
+        "metric": "baseline_cost_without_pv_battery_uah",
+        "value": "65906.28"
+      },
+      {
+        "metric": "import_cost_with_ems_uah",
+        "value": "39023.43337699212"
+      },
+      {
+        "metric": "export_revenue_uah",
+        "value": "0.0"
+      },
+      {
+        "metric": "net_cost_with_ems_uah",
+        "value": "39023.43337699212"
+      },
+      {
+        "metric": "weekly_savings_uah",
+        "value": "26882.846623007877"
+      },
+      {
+        "metric": "projected_annual_savings_uah",
+        "value": "1397908.0243964097"
+      },
+      {
+        "metric": "assumed_capex_uah",
+        "value": "4960000.0"
+      },
+      {
+        "metric": "simple_payback_years",
+        "value": "3.5481590443989575"
+      }
+    ]
+  }
+}
