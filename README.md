@@ -146,3 +146,60 @@ They allow analyzing measurements separately by accounting level and by total ho
 ## Очікуваний результат
 
 Після виконання команд буде створено SQLite database `data/energy_management.db`, заповнено її даними для університету за один рік та сформовано CSV-файли з результатами базової аналітики.
+
+---
+
+# Лабораторна робота №2
+
+**Тема:** Аналіз даних та прогнозування енергоспоживання  
+**Дисципліна:** Програмне забезпечення енергетичного менеджменту  
+**Студент:** Pashchenko Mykola  
+**Група:** TR-51mp  
+**Варіант:** 8, University
+
+## Мета роботи
+
+На основі даних, отриманих у лабораторній роботі №1, виконати аналітичне дослідження, визначити фактори впливу на енергоспоживання та побудувати моделі прогнозування.
+
+## Як запустити Lab 2
+
+Спочатку має існувати база `data/energy_management.db` з Lab 1. Потім виконайте:
+
+```powershell
+python .\src\lab2_prepare_dataset.py
+python .\src\lab2_eda.py
+python .\src\lab2_train_models.py
+python .\src\lab2_forecast.py
+```
+
+## Результати Lab 2
+
+- Prepared dataset: `data/lab2/analysis_dataset.csv`
+- Descriptive statistics: `data/lab2/descriptive_statistics.csv`
+- Missing values: `data/lab2/missing_values.csv`
+- Outlier summary: `data/lab2/outlier_summary.csv`
+- Autocorrelation: `data/lab2/autocorrelation.csv`
+- Model comparison: `data/lab2/model_comparison.csv`
+- Residuals: `data/lab2/residuals.csv`
+- Next-month forecast: `data/lab2/next_month_forecast.csv`
+- Best model: `models/lab2_best_model.pkl`
+- Report: `docs/lab2_report.md`
+- Figures: `reports/figures/*.png`
+
+## Візуалізації
+
+The Lab 2 workflow creates at least 10 figures:
+
+- consumption across the year,
+- distribution,
+- box plot by hour,
+- daily profile,
+- workday vs weekend profile,
+- monthly dynamics,
+- heatmap by hour and weekday,
+- consumption vs temperature,
+- correlation matrix,
+- monthly temperature/consumption,
+- actual vs predicted values,
+- residual distribution,
+- feature importance when available.
