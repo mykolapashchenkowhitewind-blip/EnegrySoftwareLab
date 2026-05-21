@@ -1,0 +1,13 @@
+metric,value
+total_consumption_kwh,12559.920900000001
+total_pv_generation_kwh,4280.082623071931
+pv_coverage_percent,34.07730555908143
+pv_self_consumption_percent,100.0
+grid_import_kwh,8327.620336302782
+grid_export_kwh,0.0
+battery_charged_kwh,519.0510255559441
+battery_discharged_kwh,471.2689661812322
+approx_battery_cycles,4.284263328920293
+min_soc_percent,20.0
+max_soc_percent,83.82
+avg_soc_percent,40.274459133091824

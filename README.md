@@ -203,3 +203,48 @@ The Lab 2 workflow creates at least 10 figures:
 - actual vs predicted values,
 - residual distribution,
 - feature importance when available.
+
+---
+
+# Лабораторна робота №3
+
+**Тема:** Моделювання системи управління енергопотоками (EMS)  
+**Дисципліна:** Програмне забезпечення енергетичного менеджменту  
+**Студент:** Pashchenko Mykola  
+**Група:** TR-51mp  
+**Варіант:** 8, University
+
+## Мета роботи
+
+Побудувати модель EMS для об'єкта з СЕС, батареєю, мережею та навантаженням. Система приймає рішення щодо заряду/розряду батареї, імпорту/експорту енергії та мінімізації вартості з урахуванням тарифних зон.
+
+## Як запустити Lab 3
+
+Спочатку мають існувати результати Lab 1, а бажано також Lab 2. Потім виконайте:
+
+```powershell
+python .\src\lab3_prepare_input.py
+python .\src\lab3_simulate_ems.py
+python .\src\lab3_analyze_results.py
+```
+
+## Результати Lab 3
+
+- Simulation input: `data/lab3/simulation_input.csv`
+- Simulation results: `data/lab3/simulation_results.csv`
+- Energy metrics: `data/lab3/energy_metrics.csv`
+- Economic metrics: `data/lab3/economic_metrics.csv`
+- Architecture: `docs/lab3_architecture.md`
+- Report: `docs/lab3_report.md`
+- Figures: `reports/lab3_figures/*.png`
+
+## Візуалізації Lab 3
+
+The workflow creates:
+
+- energy balance,
+- battery SOC,
+- grid import/export,
+- consumption sources,
+- savings by tariff zone,
+- baseline cost versus EMS cost.

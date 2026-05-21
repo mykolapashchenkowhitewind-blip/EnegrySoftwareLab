@@ -1,0 +1,9 @@
+metric,value
+baseline_cost_without_pv_battery_uah,65906.28
+import_cost_with_ems_uah,39023.43337699212
+export_revenue_uah,0.0
+net_cost_with_ems_uah,39023.43337699212
+weekly_savings_uah,26882.846623007877
+projected_annual_savings_uah,1397908.0243964097
+assumed_capex_uah,4960000.0
+simple_payback_years,3.5481590443989575
